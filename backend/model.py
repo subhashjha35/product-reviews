@@ -9,20 +9,20 @@ import numpy as np
 import helper
 
 # download file from url and extract
-# data.download(
-#     "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Clothing_Shoes_and_Jewelry_5.json.gz",
-#     "./reviews_Clothing_Shoes_and_Jewelry_5.json.gz")
+data.download(
+     "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Clothing_Shoes_and_Jewelry_5.json.gz",
+     "./reviews_Clothing_Shoes_and_Jewelry_5.json.gz")
 #
 # data.download(
 #     "http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Sports_and_Outdoors_5.json.gz",
 #     "./reviews_Sports_and_Outdoors_5.json.gz")
 
 # read the file using pandas dataframe
-df_clothing = pd.read_json("reviews_Clothing_Shoes_and_Jewelry_5.json", lines=True)
-df_sports = pd.read_json("reviews_Sports_and_Outdoors_5.json", lines=True)
+df = pd.read_json("reviews_Clothing_Shoes_and_Jewelry_5.json", lines=True)
+# df_sports = pd.read_json("reviews_Sports_and_Outdoors_5.json", lines=True)
 
 # Concat the dataframes
-df = pd.concat([df_clothing, df_sports])
+# df = pd.concat([df_clothing, df_sports])
 
 df["label"] = np.where(df.overall >= 3, 1, 0)
 
@@ -58,7 +58,7 @@ num_classes = 2
 # Number of words in each of our sequences
 sequence_length = 72
 # If true, restore the model weights from file
-restore = True
+restore = False
 
 # Call to our preprocessing file and tokenize our sequences.
 data, word_to_idx, idx_to_word, T = helper.tokenization_and_proprocessing(text, vocab_size=vocab_size)
@@ -181,7 +181,7 @@ def train_model(X_train, y_train):
         writer.flush()
         writer.close()
 
-# train_model(X_train, y_train)
+train_model(X_train, y_train)
 
 def translate_seq_to_text(seqs):
     words = []
