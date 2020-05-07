@@ -1,0 +1,33 @@
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="container">
+    <h4 style="color: #e6e6e6">Product Reviews</h4>
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/products">Products</a>
+      <a class="nav-item nav-link" (click)="logout()" *ngIf="currentUser">Logout</a>
+      <a class="nav-item nav-link" [routerLink] = "['/login']" *ngIf="!currentUser">Login</a>
+  </div>
+  </div>
+</nav>
+
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-8 offset-sm-2">
+              <alert></alert>
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- credits -->
+<div class="text-center">
+  <p>
+      <a href="#">Semantic Analysis Project By Subhash & Vikas</a>
+  </p>
+  <p>
+      <a href="#" target="_top">viksub.com</a>
+  </p>
+</div>
