@@ -1,6 +1,12 @@
 # ProductReviews
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0-next.0.
+## Requirements
+You must have latest version of `Node` installed. You can get node from [here](https://nodejs.org/en/download/).
+If you have node installed. you can checkout the `UI` directory and execute the following command to install the dependencies.
+```
+npm install
+```
 
 ## Development server
 
