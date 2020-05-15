@@ -26,11 +26,12 @@ Flask-Intro
 
 Sample code from my "Introduction to Flask" presentation. The slides for this presentation are available at [https://speakerdeck.com/miguelgrinberg/introduction-to-flask](https://speakerdeck.com/miguelgrinberg/introduction-to-flask).
 
-Requirements
-------------
+### Run flask
+```
+$ python3 backend/model.py
+```
+In flask, Default port is `5000`
 
-- Flask (pip install flask) is required for all the examples.
-- Flask-Bootstrap (pip install flask-bootstrap) is required for examples 4 and up.
-- Flask-WTF (pip install flask-wtf) is required for examples 5 and up.
+The server will be running on :  `http://127.0.0.1:5000/api`
 
 
