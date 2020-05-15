@@ -1,2 +1,2 @@
-# product-reviews
+# Product Review Analysis
 Sentiment Analysis project
