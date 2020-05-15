@@ -28,7 +28,7 @@ Sample code from my "Introduction to Flask" presentation. The slides for this pr
 
 ### Run flask
 ```
-$ python3 backend/model.py
+$ python3 model.py
 ```
 In flask, Default port is `5000`
 
